@@ -45,7 +45,6 @@ ol {
   display: grid;
   grid-template-columns: 711px 399px;
   justify-content: center;
-  min-height: 534px;
   gap: 30px;
 }
 
@@ -116,13 +115,13 @@ ol {
 .search-form__textfield {
   appearance: none;
   width: 225px;
-  font-family: 'Fira Sans Condensed';
+  font-family: 'Fira Sans Condensed', sans-serif;
   font-weight: 400;
   font-style: normal;
   font-size: 18px;
   line-height: 22px;
   color: rgba(255, 255, 255, 0.7);
-  background-color: #1b1919;
+  background-color: transparent;
   border: none;
   border-bottom: 0.4px solid white;
   border-top: 0.4px solid white;
@@ -184,8 +183,8 @@ ol {
   align-self: flex-end;
   height: 34px;
   background-color: transparent;
-  border: 1px solid #fff;
-  font-family: 'Fira Sans Condensed';
+  border: 1px solid currentColor;
+  font-family: 'Fira Sans Condensed', sans-serif;
   font-weight: 700;
   font-style: normal;
   font-size: 18px;
@@ -225,7 +224,7 @@ ol {
 .title {
   display: block;
   text-transform: uppercase;
-  font-family: 'Oswald';
+  font-family: 'Oswald', sans-serif;
   font-weight: 700;
   line-height: 70px;
   font-style: normal;
@@ -243,7 +242,6 @@ ol {
   height: 298px;
   max-width: 398px;
   overflow-y: scroll;
-  overflow-x: hidden;
   padding-top: 3px;
   padding: 1px;
 }
@@ -252,19 +250,16 @@ ol {
   margin-bottom: 33px;
 }
 
-.content__card-link {
-  cursor: pointer;
-}
-
 .content__video-card {
   display: grid;
-  grid-template-columns: 200px 194px;
+  grid-template-columns: 200px min-content;
   color: #fff;
 }
 
 .content__card-link {
   display: block;
   text-decoration: none;
+  cursor: pointer;
 }
 
 .content__list-item:has(.content__card-link:focus-visible) {
@@ -293,7 +288,8 @@ ol {
 }
 
 .content__video-card-title {
-  font-family: 'Oswald';
+  max-width: 200px;
+  font-family: 'Oswald', sans-serif;
   font-weight: 700;
   line-height: 30px;
   font-style: normal;
@@ -307,7 +303,8 @@ ol {
 }
 
 .content__video-card-description {
-  font-family: 'Fira Sans Condensed';
+  max-width: 200px;
+  font-family: 'Fira Sans Condensed', sans-serif;
   font-weight: 400;
   line-height: 16px;
   font-style: normal;
@@ -315,10 +312,10 @@ ol {
 }
 
 .content__video-card-thumbnail { 
-  max-width: 100%;
+  max-width: 180px;
   height: 103px;
-  background-repeat: no-repeat;
-  background-position: center center;
+  object-fit: cover;
+  object-position: center;
   padding: 1px;
 }
 
