@@ -1,1 +1,4 @@
-https://github.com/Tatianaign20/posmotri_v_okno
+#  Посмотри в окно
+Учебный проект.  
+## Ссылка
+https://tatianaign20.github.io/posmotri_v_okno/
